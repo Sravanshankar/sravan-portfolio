@@ -135,7 +135,7 @@ export default function Hero() {
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="/resume.png"
+              href="/sravan-portfolio/resume.png"
               download="Sravan_Shankar_Resume.png"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:border-cyber-purple dark:hover:border-cyber-purple text-slate-800 dark:text-white font-medium text-sm hover:scale-[1.02] transition-all duration-300"
             >
