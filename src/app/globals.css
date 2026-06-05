@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+}
+
+.light {
+  --theme-bg: #ffffff;
+  --theme-text: #09090b;
+  --theme-muted: #71717a;
+  --theme-card: #fafafa;
+  --theme-border: rgba(0, 0, 0, 0.06);
+}
+
+.dark {
+  --theme-bg: #000000;
+  --theme-text: #fafafa;
+  --theme-muted: #a1a1aa;
+  --theme-card: #09090b;
+  --theme-border: rgba(255, 255, 255, 0.06);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  background-color: var(--theme-bg);
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Glassmorphism utility overrides */
+.glass-nav {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-card {
+  background-color: rgba(9, 9, 11, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.light .glass-card {
+  background-color: rgba(250, 250, 250, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Subtle Spotlights and Glow Borders */
+.glow-border {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.glow-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.glow-border:hover::after {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(6, 182, 212, 0.2), rgba(139, 92, 246, 0.3));
+}
+
+/* Cyber grid design (Ultra clean and faint) */
+.grid-bg-dark {
+  background-image: 
+    radial-gradient(at 50% 0%, rgba(59, 130, 246, 0.03) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.02) 0px, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.003) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.003) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 60px 60px, 60px 60px;
+}
+
+.grid-bg-light {
+  background-image: 
+    radial-gradient(at 50% 0%, rgba(59, 130, 246, 0.02) 0px, transparent 50%),
+    linear-gradient(rgba(0, 0, 0, 0.005) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.005) 1px, transparent 1px);
+  background-size: 100% 100%, 60px 60px, 60px 60px;
+}
+
+/* Custom styles for animations */
+.cursor-glow {
+  pointer-events: none;
+  background: radial-gradient(500px circle at var(--x, 0px) var(--y, 0px), rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01) 40%, transparent 80%);
+}
+
+.accent-text-gradient {
+  background: linear-gradient(135deg, #ffffff 30%, #a1a1aa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.light .accent-text-gradient {
+  background: linear-gradient(135deg, #09090b 30%, #52525b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
