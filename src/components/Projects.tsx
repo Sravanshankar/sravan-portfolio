@@ -213,7 +213,7 @@ export default function Projects() {
               {/* Screenshot Frame */}
               <div className="relative h-[250px] sm:h-[350px] w-full bg-[#0a0b10] overflow-hidden">
                 <Image
-                  src="/images/medical-dashboard.png"
+                  src="/sravan-portfolio/images/medical-dashboard.png"
                   alt="Medical Information System Preview"
                   fill
                   sizes="(max-w-768px) 100vw, 400px"

@@ -196,7 +196,7 @@ export default function Hero() {
 
             <div className="w-full h-full rounded-[24px] bg-neutral-900 overflow-hidden relative border border-black/10 dark:border-white/10 group shadow-2xl transition-all duration-300">
               <Image
-                src="/profile.jpg"
+                src="/sravan-portfolio/profile.jpg"
                 alt="Sravan Shankar P"
                 fill
                 sizes="(max-w-768px) 100vw, 320px"
